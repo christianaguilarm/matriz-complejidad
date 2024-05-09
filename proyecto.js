@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (allSelected) {
             var complejidad = calcularComplejidad(totalPuntaje);
-            resultadoNegocio.innerText = "La suma de los puntajes seleccionados es: " + totalPuntaje + ". Complejidad: " + complejidad;
+            resultadoNegocio.innerText = "Complejidad: " + complejidad;
         } else {
             resultadoNegocio.innerText = "Debe seleccionar una opción en cada select.";
         }
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (allSelected) {
             var complejidad = calcularComplejidad(totalPuntaje);
-            resultadoTecnologia.innerText = "La suma de los puntajes seleccionados es: " + totalPuntaje + ". Complejidad: " + complejidad;
+            resultadoTecnologia.innerText = "Complejidad: " + complejidad;
         } else {
             resultadoTecnologia.innerText = "Debe seleccionar una opción en cada select.";
         }
