@@ -17,17 +17,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (allSelected) {
-            var complejidad = calcularComplejidad(totalPuntaje);
+            var complejidad = calcularComplejidadNegocio(totalPuntaje);
             resultadoNegocio.innerText = "Complejidad: " + complejidad;
         } else {
             resultadoNegocio.innerText = "Debe seleccionar una opción en cada select.";
         }
     });
 
-    function calcularComplejidad(puntaje) {
+    function calcularComplejidadNegocio(puntaje) {
         if (puntaje >= 8 && puntaje <= 12) {
             return "Baja";
         } else if (puntaje >= 13 && puntaje <= 20) {
+            return "Media";
+        } else {
+            return "Alta";
+        }
+    }
+
+    function calcularComplejidadTecnologia(puntaje) {
+        if (puntaje >= 7 && puntaje <= 11) {
+            return "Baja";
+        } else if (puntaje >= 12 && puntaje <= 18) {
             return "Media";
         } else {
             return "Alta";
@@ -52,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (allSelected) {
-            var complejidad = calcularComplejidad(totalPuntaje);
+            var complejidad = calcularComplejidadTecnologia(totalPuntaje);
             resultadoTecnologia.innerText = "Complejidad: " + complejidad;
         } else {
             resultadoTecnologia.innerText = "Debe seleccionar una opción en cada select.";
