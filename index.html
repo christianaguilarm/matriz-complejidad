@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matriz de Complejidad</title>
+    <style>
+        td {
+            font-size: 18px;
+        }
+        th {
+            font-size: 18px;
+        }
+        select {
+            font-size: 15px;
+        }
+        option {
+            font-size: 15px;
+        }
+        button {
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 6px 24px;
+            background-color: #94ff94;
+            border: 0;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 <body>
     <h1>Matriz de Complejidad</h1>
 
-    <h3>Complejidad del negocio</h3>
+    <h2>Complejidad del negocio</h2>
     <table id="matrizNegocio">
         <tr>
             <th></th>
             <th>Zona</th>
         </tr>
         <tr>
-            <td>Cuantos ejecutivos de la organización poseen conocimientos en esa rama del negocio.</td>
+            <td style="padding-right: 10px; padding-bottom: 10px;">Cuantos ejecutivos de la organización poseen conocimientos en esa rama del negocio</td>
             <td>
-                <select id="ejecutivos">
+                <select id="ejecutivos" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">1</option>
                     <option value="2">Entre 2 y 3</option>
@@ -26,9 +57,9 @@
             </td>
         </tr>
         <tr>
-            <td>Definición de objetivos del negocio</td>
+            <td style="padding-bottom: 10px;">Definición de objetivos del negocio</td>
             <td>
-                <select id="definicion-objetivos-negocio">
+                <select id="definicion-objetivos-negocio" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Método SMART</option>
                     <option value="2">Método SMART, aplicado no en su totalidad</option>
@@ -37,9 +68,9 @@
             </td>
         </tr>
         <tr>
-            <td>Procesos de negocio</td>
+            <td style="padding-bottom: 10px;">Procesos de negocio</td>
             <td>
-                <select id="procesos-negocio">
+                <select id="procesos-negocio" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Pocos (1 a 4)</option>
                     <option value="2">5 a 6</option>
@@ -48,9 +79,9 @@
             </td>
         </tr>
         <tr>
-            <td>Políticas del negocio</td>
+            <td style="padding-bottom: 10px;">Políticas del negocio</td>
             <td>
-                <select id="politicas-negocio">
+                <select id="politicas-negocio" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Existentes</option>
                     <option value="2">Vagas</option>
@@ -59,9 +90,9 @@
             </td>
         </tr>
         <tr>
-            <td>Regulaciones del negocio (Superintendencia o SII)</td>
+            <td style="padding-bottom: 10px;">Regulaciones del negocio (Superintendencia o SII)</td>
             <td>
-                <select id="regulaciones-negocio">
+                <select id="regulaciones-negocio" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Pocas y Simples</option>
                     <option value="2">Pocas y complejas</option>
@@ -70,9 +101,9 @@
             </td>
         </tr>
         <tr>
-            <td>Personal</td>
+            <td style="padding-bottom: 10px;">Personal</td>
             <td>
-                <select id="personal">
+                <select id="personal" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Experimentado</option>
                     <option value="2">Poca experiencia</option>
@@ -81,9 +112,9 @@
             </td>
         </tr>
         <tr>
-            <td>Ámbito geográfico del negocio</td>
+            <td style="padding-bottom: 10px;">Ámbito geográfico del negocio</td>
             <td>
-                <select id="ambito-geografico-negocio">
+                <select id="ambito-geografico-negocio" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Una Localización </option>
                     <option value="2">Regional</option>
@@ -92,9 +123,9 @@
             </td>
         </tr>
         <tr>
-            <td>Reglas internas del negocio</td>
+            <td style="padding-bottom: 10px;">Reglas internas del negocio</td>
             <td>
-                <select id="alta-baja">
+                <select id="alta-baja" style="width: 282px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Establecidas</option>
                     <option value="2">Vagas</option>
@@ -102,20 +133,24 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <td>
+                <button id="calcularNegocio">Calcular</button>
+            </td>
+            <td><div style="font-weight: bold;" id="resultadoNegocio"></div></td>
+        </tr>
     </table>
-    <button id="calcularNegocio">Calcular</button>
-    <div id="resultadoNegocio"></div>
 
-    <h3>Complejidad de la tecnologia</h3>
+    <h2 style="padding-top: 15px;">Complejidad de la tecnologia</h2>
     <table id="matrizTecnologia">
         <tr>
             <th></th>
             <th>Zona</th>
         </tr>
         <tr>
-            <td>Arquitectura tecnológica del proyecto</td>
+            <td style="padding-bottom: 10px;">Arquitectura tecnológica del proyecto</td>
             <td>
-                <select id="baja-baja">
+                <select id="baja-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Existente en la empresa</option>
                     <option value="2">Existen, pero no desarrolladas</option>
@@ -124,9 +159,9 @@
             </td>
         </tr>
         <tr>
-            <td>Proveedores de Tecnología y telecomunicaciones</td>
+            <td style="padding-bottom: 10px;">Proveedores de Tecnología y telecomunicaciones</td>
             <td>
-                <select id="media-baja">
+                <select id="media-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Antiguos, con presencia de más de 4 años en el mercado</option>
                     <option value="2">Antiguos con presencia de menos de 4 años en el mercado</option>
@@ -135,9 +170,9 @@
             </td>
         </tr>
         <tr>
-            <td>Localización de los dispositivos a controlar</td>
+            <td style="padding-bottom: 10px;">Localización de los dispositivos a controlar</td>
             <td>
-                <select id="alta-baja">
+                <select id="alta-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Una</option>
                     <option value="2">Entre 3 y 4 localizaciones</option>
@@ -146,9 +181,9 @@
             </td>
         </tr>
         <tr>
-            <td>Personal de áreas tecnológicas</td>
+            <td style="padding-bottom: 10px;">Personal de áreas tecnológicas</td>
             <td>
-                <select id="alta-baja">
+                <select id="alta-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Experimentado, más de 2 años</option>
                     <option value="2">Menos de 2 años de experiencia</option>
@@ -157,9 +192,9 @@
             </td>
         </tr>
         <tr>
-            <td>Cantidad de plataformas</td>
+            <td style="padding-bottom: 10px;">Cantidad de plataformas</td>
             <td>
-                <select id="alta-baja">
+                <select id="alta-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Pocas (1 a 3)</option>
                     <option value="2">4</option>
@@ -168,9 +203,9 @@
             </td>
         </tr>
         <tr>
-            <td>Nivel de integración de las distintas plataformas, actualmente</td>
+            <td style="padding-bottom: 10px; padding-right: 182px;">Nivel de integración de las distintas plataformas, actualmente</td>
             <td>
-                <select id="alta-baja">
+                <select id="alta-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Integradas</option>
                     <option value="2">Medianamente integradas</option>
@@ -179,9 +214,9 @@
             </td>
         </tr>
         <tr>
-            <td>Plataformas tolerantes a fallas o redundantes </td>
+            <td style="padding-bottom: 10px;">Plataformas tolerantes a fallas o redundantes </td>
             <td>
-                <select id="alta-baja">
+                <select id="alta-baja" style="width: 375px">
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Muchas (Mayor a 70%)</option>
                     <option value="2">Entre 30% y 69%</option>
@@ -189,11 +224,15 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <td style="padding-bottom: 10px;"><button id="calcularTecnologia">Calcular</button></td>
+            <td>
+                <div style="font-weight: bold;" id="resultadoTecnologia"></div>
+            </td>
+        </tr>
 
     </table>
-    <button id="calcularTecnologia">Calcular</button>
-    <div id="resultadoTecnologia"></div>
-
+    
     <script src="proyecto.js"></script>
 </body>
 </html>
