@@ -1,0 +1,265 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Complejidad</title>
+</head>
+<body>
+    <h1>Matriz de Complejidad</h1>
+
+    <h3>Complejidad del negocio</h2>
+    <table id="matriz">
+        <tr>
+            <th></th>
+            <th>Zona</th>
+        </tr>
+        <tr>
+            <td>Ejecutivos de la organizacion que poseen conocimientos en la rama del negocio</td>
+            <td>
+                <select id="baja-baja">
+                    <option value=0 selected>Seleccione una opción</option>
+                    <option value=1>Baja</option>
+                    <option value=2>Media</option>
+                    <option value=3>Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Definición de objetivos del negocio</td>
+            <td>
+                <select id="media-baja">
+                    <option value=0 selected>Seleccione una opción</option>
+                    <option value=1>Baja</option>
+                    <option value=2>Media</option>
+                    <option value=3>Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Procesos del negocio</td>
+            <td>
+                <select id="alta-baja">
+                    <option value=0 selected>Seleccione una opción</option>
+                    <option value=1>Baja</option>
+                    <option value=2>Media</option>
+                    <option value=3>Alta</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <script src="proyecto.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Complejidad</title>
+</head>
+<body>
+    <h1>Matriz de Complejidad</h1>
+
+    <h3>Complejidad del negocio</h3>
+    <table id="matrizNegocio">
+        <tr>
+            <th></th>
+            <th>Zona</th>
+        </tr>
+        <tr>
+            <td>Ejecutivos de la organizacion que poseen conocimientos en la rama del negocio</td>
+            <td>
+                <select id="baja-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Definición de objetivos del negocio</td>
+            <td>
+                <select id="media-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 3</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 4</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 5</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 6</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 7</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 8</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button id="calcularNegocio">Calcular</button>
+    <div id="resultadoNegocio"></div>
+
+    <h3>Complejidad de la tecnologia</h3>
+    <table id="matrizTecnologia">
+        <tr>
+            <th></th>
+            <th>Zona</th>
+        </tr>
+        <tr>
+            <td>Atributo 1</td>
+            <td>
+                <select id="baja-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 2</td>
+            <td>
+                <select id="media-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 3</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 4</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 5</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 6</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 7</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Atributo 8</td>
+            <td>
+                <select id="alta-baja">
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </td>
+        </tr>
+
+    </table>
+    <button id="calcularTecnologia">Calcular</button>
+    <div id="resultadoTecnologia"></div>
+
+    <script src="proyecto.js"></script>
+</body>
+</html>
